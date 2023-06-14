@@ -7,7 +7,23 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  var arr1 = str.split("");
+  // Here we take a copy of arr1 and reverse it
+  // if we write arr1.reverse() it will not change the original array 
+  var arr2 = [...arr1].reverse();
+  var str1 = arr1.join("").toLowerCase();
+  var str2 = arr2.join("").toLowerCase(); 
+  if (str1 === str2) {
+    return true;
+  }
+  else {
+    return false;
+  }
+
 }
+
+const str = "Nan";
+
+console.log(isPalindrome(str));
 
 module.exports = isPalindrome;
